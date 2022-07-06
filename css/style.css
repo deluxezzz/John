@@ -110,6 +110,9 @@ body {
   display: flex;
   padding-top: 140px;
 }
+.hi__info {
+  margin-right: 115px;
+}
 .hi__title {
   padding-top: 15px;
   font-weight: 700;
@@ -133,7 +136,8 @@ body {
   border-radius: 2px;
 }
 .hi__avatar {
-  width: 253px;
+  flex: 0 0 253px;
   height: 253px;
   border-radius: 50%;
+  box-shadow: -15px 15px #EDF7FA;
 }/*# sourceMappingURL=style.css.map */
