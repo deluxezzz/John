@@ -1,0 +1,89 @@
+/*Обнуление*/
+*{padding: 0; margin: 0; border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height: 100%; width: 100%; font-size: 100%; line-height: 1; font-size: 14px; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap');
+
+body {
+    color: #21243D;
+    font-family: 'Heebo';
+    
+}
+.container{
+    max-width: 886px;
+    padding: 0 15px;
+    height: 100%;
+    margin: 0 auto;
+}
+.header {
+    max-width: 1058px;
+    padding: 32px 15px;
+    margin: 0 auto;
+    &__nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 20px;
+        font-weight: 500;
+        color: #000000;
+        li {
+        padding: 0 0 0 16px;
+        }
+    }
+}
+
+.hi {
+    display: flex;
+    padding-top: 140px;
+    &__info {
+    }
+
+    &__title {
+        padding-top: 15px;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 60px / 44px * 100%;
+    }
+
+    &__text {
+        padding-top: 28px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px / 16px * 100%;
+    }
+
+    &__button {
+        margin-top: 38px;
+        font-weight: 500;
+        font-size: 20px;
+        color: #FFFFFF;
+        width: 208px;
+        height: 47px;
+        background: #FF6464;
+        border-radius: 2px;
+    }
+
+    &__avatar {
+        width: 253px;
+        height: 253px;
+        border-radius: 50%;
+    }
+}
