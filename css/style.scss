@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 body {
     color: #21243D;
     font-family: 'Heebo';
-    
+    font-weight: 400;    
 }
 .container{
     max-width: 886px;
@@ -51,26 +51,24 @@ body {
 }
 
 .hi {
-    display: flex;
-    padding-top: 140px;
-    &__info {
-        margin-right: 115px;
+    padding: 140px 0 70px 0;
+    &_flex {
+        display: flex;
     }
-
+    &__info {
+        margin-right: calc(15px + (115 - 15) * ((100vw - 768px) / (1600 - 768)));
+    }
     &__title {
         padding-top: 15px;
         font-weight: 700;
         font-size: 44px;
         line-height: 60px / 44px * 100%;
     }
-
     &__text {
         padding-top: 28px;
-        font-weight: 400;
         font-size: 16px;
         line-height: 24px / 16px * 100%;
     }
-
     &__button {
         margin-top: 38px;
         font-weight: 500;
@@ -81,11 +79,70 @@ body {
         background: #FF6464;
         border-radius: 2px;
     }
-
     &__avatar {
         flex: 0 0 253px;
         height: 253px;
         border-radius: 50%;
-        box-shadow: -15px 15px #EDF7FA;;
+        box-shadow: -15px 15px #EDF7FA;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.block-2 {
+    width: 100%;
+    background-color: #EDF7FA;
+    padding: 32px 0;
+    &__title-view {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 32px;
+    }
+    &__title {
+        font-size: 22px;
+    }
+
+    &__view {
+        font-size: 16px;
+        color: #00A8CC;
+    }
+}
+.posts {
+    display: flex;
+    justify-content: space-between;
+}
+.post {
+    flex: 0 1 49%;
+    background-color: #FFFFFF;
+    padding: 21px;
+    &__title {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 38px;
+    }
+    &__date-subtitle {
+        margin: 25px 0;
+        display: flex;
+        align-items: center;
+    }
+    &__date {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    &__icon {
+        width: 1.5px;
+        height: 21px;
+        background-color: #21243D;
+        margin: 0 20px;
+    }
+    &__subtitle {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
     }
 }

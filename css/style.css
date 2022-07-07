@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   color: #21243D;
   font-family: "Heebo";
+  font-weight: 400;
 }
 
 .container {
@@ -107,11 +108,13 @@ body {
 }
 
 .hi {
+  padding: 140px 0 70px 0;
+}
+.hi_flex {
   display: flex;
-  padding-top: 140px;
 }
 .hi__info {
-  margin-right: 115px;
+  margin-right: calc(15px + 100 * (100vw - 768px) / 832);
 }
 .hi__title {
   padding-top: 15px;
@@ -121,7 +124,6 @@ body {
 }
 .hi__text {
   padding-top: 28px;
-  font-weight: 400;
   font-size: 16px;
   line-height: 150%;
 }
@@ -140,4 +142,65 @@ body {
   height: 253px;
   border-radius: 50%;
   box-shadow: -15px 15px #EDF7FA;
+}
+.hi__avatar img {
+  width: 100%;
+}
+
+.block-2 {
+  width: 100%;
+  background-color: #EDF7FA;
+  padding: 32px 0;
+}
+.block-2__title-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+}
+.block-2__title {
+  font-size: 22px;
+}
+.block-2__view {
+  font-size: 16px;
+  color: #00A8CC;
+}
+
+.posts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post {
+  flex: 0 1 49%;
+  background-color: #FFFFFF;
+  padding: 21px;
+}
+.post__title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 38px;
+}
+.post__date-subtitle {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+.post__date {
+  font-size: 18px;
+  line-height: 26px;
+}
+.post__icon {
+  width: 1.5px;
+  height: 21px;
+  background-color: #21243D;
+  margin: 0 20px;
+}
+.post__subtitle {
+  font-size: 18px;
+  line-height: 26px;
+}
+.post__text {
+  font-size: 16px;
+  line-height: 24px;
 }/*# sourceMappingURL=style.css.map */
