@@ -9,14 +9,25 @@ input,button,textarea{font-family:inherit;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
+a, a:visited{text-decoration: none;cursor: pointer;}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
-/*--------------------*/
+/*Подключение шрифтов*/
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap');
+/*Миксины для @media*/
+$mw1: "max-width: 992px";
+$mw2: "max-width: 768px";
+$mw3: "max-width: 576px";
+$mw4: "max-width: 375px";
 
+a, a:visited{
+    color:#21243D;
+}
+a:hover{
+    color:#FF6464;
+}
 body {
     color: #21243D;
     font-family: 'Heebo';
@@ -27,11 +38,13 @@ body {
     padding: 0 15px;
     height: 100%;
     margin: 0 auto;
+
 }
 .header {
     max-width: 1058px;
     padding: 32px 15px;
     margin: 0 auto;
+
     &__nav {
         width: 100%;
         display: flex;
@@ -52,22 +65,41 @@ body {
 
 .hi {
     padding: 140px 0 70px 0;
+    @media($mw4){
+        flex: 0 0 90%;
+        margin-right: 15px;
+        padding: 35px 0 65px 0;
+    }
     &_flex {
         display: flex;
+        @media($mw3){
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
     &__info {
         margin-right: 115px;
+        @media($mw2){
+            margin-right: 50px;
+        }
+        @media($mw3){
+            margin-right: 0;
+            text-align: center;
+        }
     }
     &__title {
         padding-top: 15px;
         font-weight: 700;
         font-size: 44px;
-        line-height: 60px / 44px * 100%;
+        line-height: calc(60px / 44px * 100%);
+        @media($mw4){
+            margin-top: 32px;
+        }
     }
     &__text {
         padding-top: 28px;
         font-size: 16px;
-        line-height: 24px / 16px * 100%;
+        line-height: calc(24px / 16px * 100%);
     }
     &__button {
         margin-top: 38px;
@@ -84,9 +116,6 @@ body {
         height: 253px;
         border-radius: 50%;
         box-shadow: -15px 15px #EDF7FA;
-        img {
-            width: 100%;
-        }
     }
 }
 
@@ -112,11 +141,18 @@ body {
 .posts {
     display: flex;
     justify-content: space-between;
+    @media($mw4){
+        overflow: auto;
+    }
 }
 .post {
     flex: 0 1 49%;
     background-color: #FFFFFF;
     padding: 21px;
+    @media($mw4){
+        flex: 0 0 90%;
+        margin-right: 15px;
+    }
     &__title {
         font-weight: 700;
         font-size: 26px;
@@ -136,6 +172,9 @@ body {
         height: 21px;
         background-color: #21243D;
         margin: 0 20px;
+        @media($mw4){
+            margin: 0 10px;
+        }
     }
     &__subtitle {
         font-size: 18px;
@@ -147,6 +186,13 @@ body {
     }
 }
 .works {
+    padding-bottom: 60px;
+    &_flex {
+        @media($mw4){
+        display: flex;
+        overflow: auto;
+        }
+    }
     &__title {
         font-size: 22px;
         padding: 38px 0 0;
@@ -156,22 +202,36 @@ body {
 
 .work {
     display: flex;
-    justify-content: flex-start;
     padding: 32px 0;
     border-bottom: 1px solid rgb(224,224,224);
-    &__img {
-        flex: 0 0 246px;
-        height: 180px;
+    @media($mw4){
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 90%;
+        margin-right: 15px;
     }
-
+    &__img {
+        display: inline-block;
+        width: 246px;
+        @media($mw4){
+            width: 305.05px;
+            & img {
+                width: 100%;
+            }
+        }
+    }
     &__info {
         margin-left: 18px;
+        @media($mw4){
+            margin-left: 0;
+            padding-top: 23px;
+        }
     }
 
     &__name {
         font-weight: 700;
         font-size: 30px;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
     &__year {
@@ -183,6 +243,7 @@ body {
         border-radius: 16px;
         text-align: center;
         padding: 4px 11px;
+        margin-right: 24px;
     }
 
     &__subname {
@@ -201,12 +262,12 @@ body {
     padding: 51px 0 51px 0;
     text-align: center;
     &__social {
+        margin-bottom: 30px;
         & img {
             display: inline-block;
-            margin: 0 17px 26px 17px;
+            margin: 0 17px 0 17px;
         }
     }
-
     &__copyright {
         text-align: center;
         font-size: 14px;
