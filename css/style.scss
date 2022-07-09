@@ -14,13 +14,8 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
-/*Подключение шрифтов*/
+/*----------------*/
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap');
-/*Миксины для @media*/
-$mw1: "max-width: 992px";
-$mw2: "max-width: 768px";
-$mw3: "max-width: 576px";
-$mw4: "max-width: 375px";
 
 a, a:visited{
     color:#21243D;
@@ -65,24 +60,24 @@ body {
 
 .hi {
     padding: 140px 0 70px 0;
-    @media($mw4){
+    @media(max-width: 576px){
         flex: 0 0 90%;
         margin-right: 15px;
         padding: 35px 0 65px 0;
     }
     &_flex {
         display: flex;
-        @media($mw3){
+        @media(max-width: 576px){
             flex-direction: column-reverse;
             align-items: center;
         }
     }
     &__info {
         margin-right: 115px;
-        @media($mw2){
+        @media(max-width: 768px){
             margin-right: 50px;
         }
-        @media($mw3){
+        @media(max-width: 576px){
             margin-right: 0;
             text-align: center;
         }
@@ -92,7 +87,7 @@ body {
         font-weight: 700;
         font-size: 44px;
         line-height: calc(60px / 44px * 100%);
-        @media($mw4){
+        @media(max-width: 576px){
             margin-top: 32px;
         }
     }
@@ -141,7 +136,7 @@ body {
 .posts {
     display: flex;
     justify-content: space-between;
-    @media($mw4){
+    @media(max-width: 576px){
         overflow: auto;
     }
 }
@@ -149,7 +144,7 @@ body {
     flex: 0 1 49%;
     background-color: #FFFFFF;
     padding: 21px;
-    @media($mw4){
+    @media(max-width: 576px){
         flex: 0 0 90%;
         margin-right: 15px;
     }
@@ -172,7 +167,7 @@ body {
         height: 21px;
         background-color: #21243D;
         margin: 0 20px;
-        @media($mw4){
+        @media(max-width: 768px){
             margin: 0 10px;
         }
     }
@@ -188,7 +183,7 @@ body {
 .works {
     padding-bottom: 60px;
     &_flex {
-        @media($mw4){
+        @media(max-width: 576px){
         display: flex;
         overflow: auto;
         }
@@ -204,25 +199,28 @@ body {
     display: flex;
     padding: 32px 0;
     border-bottom: 1px solid rgb(224,224,224);
-    @media($mw4){
+    @media(max-width: 576px){
         flex-direction: column;
         align-items: center;
         flex: 0 0 90%;
         margin-right: 15px;
     }
+    &__img-container{
+        flex: 0 0 246px;
+
+        @media(max-width: 576px){
+            width: 100%;
+        }
+    }
     &__img {
-        display: inline-block;
-        width: 246px;
-        @media($mw4){
-            width: 305.05px;
-            & img {
-                width: 100%;
-            }
+        width: 100%;
+        & img {
+            width: 100%;
         }
     }
     &__info {
         margin-left: 18px;
-        @media($mw4){
+        @media(max-width: 576px){
             margin-left: 0;
             padding-top: 23px;
         }
